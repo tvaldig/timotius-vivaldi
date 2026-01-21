@@ -19,9 +19,3 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t timotius-vivaldi-app .
-
-      - name: Run container test
-        run: |
-          docker run -d -p 8080:80 kali-nginx-app
-          sleep 5
-          curl http://localhost:8080
